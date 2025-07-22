@@ -1,0 +1,44 @@
+@use './_variables' as *;
+@use './_fonts';
+
+
+.title {
+    font-family: $font-xxemeetage;
+    font-size: $font-size-title;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.text {
+    font-family: $font-xxemeetage;
+    font-size: $font-size-text;
+    font-weight: 400;
+    line-height: 1.6;
+    color: $text-color;
+}
+
+.hashtag {
+    font-family: $font-xxemeetage;
+    font-size: $font-size-hashtag;
+    font-weight: 500;
+    color: $hashtag-color;
+    letter-spacing: 0.05em;
+}
+
+.section-title {
+    font-family: $font-xxemeetage;
+    font-size: $font-size-section-title;
+    font-weight: 600;
+    border-bottom: 2px solid $section-border;
+}
+
+.mobile-text {
+    font-family: $font-xxemeetage;
+    font-size: $font-size-mobile-text;
+    line-height: 1.4;
+    color: $text-color;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: $font-size-text;
+    }
+}

@@ -1,0 +1,3 @@
+@mixin vw-calc($property, $px-value, $base-width: 1920) {
+    #{$property}: calc(#{$px-value} / #{$base-width} * 100vw);
+}

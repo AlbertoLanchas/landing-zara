@@ -1,0 +1,23 @@
+@use 'partials/_typography';
+
+@use 'partials/_reset';
+@use 'partials/_keyframes';
+@use 'partials/_variables';
+@use 'partials/_mixins';
+
+
+// Components
+@use 'components/Hero';
+
+@use 'components/Featured';
+@use 'components/Gallery';
+
+@use 'components/TwoColumns';
+
+@use 'components/Carousel';
+
+@use 'components/Collection';
+
+body {
+    font-family: variables.$font-xxemeetage, sans-serif;
+}

@@ -1,0 +1,96 @@
+@use '../partials/mixins' as m;
+
+.collection {
+    @include m.vw-calc(width, 1587.96);
+    @include m.vw-calc(height, 2487.06);
+    @include m.vw-calc(margin-left, 169.06);
+    @include m.vw-calc(margin-bottom, 115.2);
+
+    &__title {
+        @include m.vw-calc(margin-bottom, 103.83);
+
+        text-align: center;
+        font-size: 2.5em;
+        color: #222;
+        letter-spacing: 2px;
+    }
+
+    &__images {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        @include m.vw-calc(gap, 14.67);
+    }
+
+    &__image-item {
+        @include m.vw-calc(width, 306.16);
+        @include m.vw-calc(height, 458.11);
+
+
+        object-fit: cover;
+        display: block;
+
+        animation: reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 20% cover 40%;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        &__image-item {
+            animation: none !important;
+            animation-timeline: unset !important;
+            animation-range: unset !important;
+            transition: none !important;
+            transform: none !important;
+
+            &:hover {
+                transform: none !important;
+            }
+        }
+    }
+
+    @media (max-width: 1919px) {
+        width: 90%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        @include m.vw-calc(margin-bottom, 115.2);
+
+        &__title {
+            margin-bottom: 2em;
+        }
+
+        &__images {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1em;
+        }
+
+        &__image-item {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @media (max-width: 576px) {
+        &__images {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+    }
+
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
