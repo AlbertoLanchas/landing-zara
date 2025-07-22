@@ -8,6 +8,7 @@
     "test:watch": "vitest --watch",
     "dev": "vite",
     "build": "tsc && vite build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "coverage": "vitest run --coverage"
   },
