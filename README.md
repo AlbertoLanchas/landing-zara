@@ -25,7 +25,7 @@ Este proyecto es una aplicación web moderna construida con **Vite**, **TypeScri
 #### 1. Clonar el Repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/AlbertoLanchas/landing-zara
 cd landing-zara
 ```
 
